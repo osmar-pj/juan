@@ -15,9 +15,10 @@ const msg = ref("");
   max-width: 300px;
   width: 100%;
   height: 45px;
-  background-color: #eeeeee;
+  background-color: grey;
   color: black;
   border-radius: 5px;
   padding: 12px 14px;
+
 }
 </style>
