@@ -1,79 +1,199 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/*//////////////////////////////////////////////////////////////////
+[ ]*/
+html,
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  
+  height: 100vh;
+  font-family: "__JetBrains_Mono_c4f6f4", "__JetBrains_Mono_Fallback_c4f6f4";
+  font-style: normal;
+  font-weight: 100;
 }
 
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+// COLORS
+:root {
+  --background: #f7f7f7;
+  --background-2: #252737;
+  --primary: #3a80fa;
+  --secondary: linear-gradient(to bottom,#F8E839, #F47630 );
+  --white: #ffffff;
+  --grey: #777777;
+  --grey-light: #f2f2f2;
+  --black: #1a1a1a;
+  --black-light-1: #ffffff;
+  --black-light-2: #d0d0d0;
+  --green: #31ee61;
+  --red: #f52840;
+  --yellow: #ffcc00;
+  --blue: #2e394d;
+  --max-value: "1000";
+  --scroll-color: #f7f7f7;
+  --br-xl: 15px;
+  --br-s: 12px;
+  --bs: rgba(100, 100, 111, 0.116) 0px 1px 8px 0px;
+}
+
+[data-theme="dark"] {
+  --background: #f7f7f7;
+  --background-2: #252737;
+  --primary: #3a80fa;
+  --secondary: #4cc9f9;
+  --white: #ffffff;
+  --grey: #777777
+  --grey-light: #dedee1;
+  --black: #1a1a1a;
+  --black-light-1: #ffffff;
+  --black-light-2: #d0d0d0;
+  --green: #31ee61;
+  --red: #f52840;
+  --yellow: #ffcc00;
+  --blue: #2e394d;
+  --max-value: "1000";
+  --scroll-color: #f7f7f7;
+}
+/*//////////////////////////////////////////////////////////////////
+[ SCROLLBAR ]*/
+
+::-webkit-scrollbar {
+  width: 4px !important;
+  height: 4px !important;
+}
+
+html[dir] .dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dedee1;
+  border-radius: 50px;
+}
+
+html[dir] .dark ::-webkit-scrollbar-track {
+  background-color: initial;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-color);
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ TITLES ]*/
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: var(--black);
+  font-size: clamp(10px, 8vw, 25px);
+  font-weight: bold;
+  line-height: 1.6rem;
+
+ 
+}
+
+h2 {
+  font-size: clamp(8px, 8vw, 20px);  
+
+}
+
+h3 {
+  color: var(--black);
+  font-size: clamp(6px, 8vw, 15px);
+  line-height: 1rem;
+  font-weight: 600;
+
+ 
+}
+
+h4 {
+  color: var(--black);
+  font-size: clamp(5px, 8vw, 11px);
+  font-weight: 100;
+ 
+}
+
+h5 {
+  color: var(--black);
+  font-size: clamp(4px, 8vw, 9px);
+  line-height: 1rem;
+
+}
+
+h6 {
+  color: var(--black);
+  font-size: clamp(4px, 8vw, 7px);
+  line-height: 1rem;
+  font-weight: normal;
+ 
+}
+
+p {
+  color: var(--black);
+  font-size: clamp(6px, 8vw, 10px);
+  line-height: 0.9rem;
+  font-weight: 100;
+
+
+}
+
+input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "__Space_Grotesk_2272f2", "__Space_Grotesk_Fallback_2272f2";
+  color: var(--black);
+}
+
+textarea {
+  font-family: "__Space_Grotesk_2272f2", "__Space_Grotesk_Fallback_2272f2";
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  transition: all 0.5s ease-out;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: none;
+  background: transparent;
+  font-family: "__Space_Grotesk_2272f2", "__Space_Grotesk_Fallback_2272f2";
 }
 
-.card {
-  padding: 2em;
+svg {
+  transition: all 0.5s ease-out;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+::-moz-selection {
+  background-color: var(--orange);
+  color: var(--white);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: var(--background);
+ 
 }
