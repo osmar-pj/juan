@@ -7,6 +7,7 @@ const msg = ref("");
   <div class="login-container">
     <div class="login-header"></div>
     <div class="login-boy">
+      <label for="">INPUT</label>
       <input v-model="msg" type="text" class="input-class" />
        <h1>{{ msg }}</h1> 
     </div>
